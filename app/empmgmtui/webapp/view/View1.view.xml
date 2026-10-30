@@ -1,0 +1,60 @@
+<mvc:View
+    controllerName="com.demo.empmgmtui.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Table id="employeeTable"  items="{path : '/Employees'}">
+                <headerToolbar>
+                    <Toolbar>
+                        <Title text="Employees" level="H2"/>
+                        <ToolbarSpacer ></ToolbarSpacer>
+                        <Button text = "Create Employee" icon = "sap-icon://add" type ="Emphasized" press="onCreate"></Button>
+                        <Button text = "Update Employee" icon = "sap-icon://add" type = "Emphasized" press="onEdit"></Button>
+                        <Button text = "Delete Employee" icon = "sap-icon://add" type ="Emphasized" press="onDelete"></Button>
+                    </Toolbar>
+                </headerToolbar>
+                <columns>
+                    <Column>
+                        <Text text="Employee ID" />
+                    </Column>
+                    <Column>
+                        <Text text="Name" />
+                    </Column>
+                    <Column>
+                        <Text text="Designation" />
+                    </Column>
+                    <Column>
+                        <Text text="Number" />
+                    </Column>
+                    <Column>
+                        <Text text="Email" />
+                    </Column>
+                    <Column>
+                        <Text text="Salary" />
+                    </Column>
+                    <Column>
+                        <Text text="Status" />
+                    </Column>
+                    <Column>
+                        <Text text="Image" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{ID}" />
+                            <Text text="{name}" />
+                            <Text text="{Designation}" />
+                            <Text text="{number}" />
+                            <Text text="{Email}" />
+                            <Text text = "{Salary}" />
+                            <Text text="{Status}" />
+                             </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>
